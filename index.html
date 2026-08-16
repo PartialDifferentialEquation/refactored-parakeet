@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Censorfest</title>
-<meta name="description" content="A 168-hour adversarial capture-the-flag crucible. Thirty engineers, three factions, one gateway, broadcast live for seven days.">
+<meta name="description" content="A 168-hour adversarial CTF. Six Red Factions build bridges that have to survive a week unattended. One Blue Faction holds the gateway in three watches. Broadcast live.">
 <meta name="theme-color" content="#0A0E13">
 <meta property="og:title" content="Censorfest">
-<meta property="og:description" content="A 168-hour adversarial capture-the-flag crucible. Thirty engineers, three factions, one gateway, broadcast live for seven days.">
+<meta property="og:description" content="A 168-hour adversarial CTF. Six Red Factions build bridges that have to survive a week unattended. One Blue Faction holds the gateway in three watches. Broadcast live.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0E13'/%3E%3Crect x='3' y='14' width='13' height='3' fill='%23FF5A36'/%3E%3Crect x='20' y='14' width='9' height='3' fill='%236EA8FF'/%3E%3Crect x='17.5' y='4' width='1' height='24' fill='%23263140'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/styles.css">
@@ -22,8 +22,10 @@
     <ul class="nav__links">
       <li><a href="#format">Format</a></li>
       <li><a href="#factions">Factions</a></li>
-      <li><a href="#escalation">Escalation</a></li>
-      <li><a href="#network">Network</a></li>
+      <li><a href="#week">The Week</a></li>
+      <li><a href="#scoring">Scoring</a></li>
+      <li><a href="#range">The Range</a></li>
+      <li><a href="#care">Care</a></li>
       <li><a href="#sponsors">Sponsors</a></li>
       <li><a href="#apply">Apply</a></li>
     </ul>
@@ -36,15 +38,17 @@
 <header class="hero" id="top">
   <canvas class="hero__canvas" id="flow" aria-hidden="true"></canvas>
   <div class="wrap hero__inner">
-    <p class="hero__tag">Asymmetric adversarial CTF <em>&#47;&#47;</em> live broadcast network crucible <em>&#47;&#47;</em> v3.0</p>
+    <p class="hero__tag">168-hour adversarial CTF <em>&#47;&#47;</em> live broadcast network crucible</p>
     <h1>
-      Seven days<br>
-      <span class="h1__b">on the wire</span>
+      The clock<br>
+      <span class="h1__b">never stops</span>
     </h1>
     <p class="hero__lede">
-      One hundred and sixty-eight continuous hours. Red Factions build evasion
-      infrastructure against a live gateway. A Sysadmin team inspects every
-      packet and drops what it doesn&rsquo;t like. Every screen is on air.
+      You do. Censorfest scores <b>infrastructure, not endurance</b> &mdash; Red
+      Factions are paid by the hour their bridges stay up while nobody is
+      watching them. You cannot babysit a tunnel for a week. You have to build
+      one that outlives your attention, then go to bed and find out whether it
+      did.
     </p>
     <div class="hero__cta">
       <a class="btn btn--primary" href="#apply">Apply to compete</a>
@@ -54,9 +58,9 @@
     <dl class="vitals">
       <div><dt>Duration</dt><dd>168 hrs</dd></div>
       <div><dt>Competitors</dt><dd>30</dd></div>
-      <div><dt>Factions</dt><dd>3</dd></div>
+      <div><dt>Red teams</dt><dd>6</dd></div>
+      <div><dt>Blue watches</dt><dd>3</dd></div>
       <div><dt>Dates</dt><dd><span class="tbc">TBC</span></dd></div>
-      <div><dt>Venue</dt><dd><span class="tbc">TBC</span></dd></div>
     </dl>
   </div>
 </header>
@@ -65,25 +69,36 @@
 <section class="section section--flush" id="format">
   <div class="wrap">
     <p class="eyebrow"><b>01</b> The format</p>
-    <h2>Not a weekend CTF</h2>
+    <h2>Build something that survives you</h2>
     <p class="lede">
-      A normal capture-the-flag ends before anyone has to live with their
-      architecture. Censorfest runs for a full week, in one venue, with
-      standardised hardware and 24-hour access &mdash; long enough that a
-      clever hack written on Tuesday has to survive until Sunday against a
-      defender who gets stronger every single day.
+      A weekend CTF ends before anyone has to live with their architecture.
+      Censorfest runs for seven days in one venue against a defender who gets
+      stronger every one of them &mdash; long enough that a clever hack written
+      on Tuesday has to still be standing on Sunday, through three shift
+      changes and two escalations, without its author touching it.
     </p>
-    <p style="margin-top:1.5rem">
-      Red Factions build resilient proxy bridges, defeat deep packet
-      inspection, and extract flags from blocked targets. The Blue Faction
-      runs the gateway everything routes through. The White Team writes the
-      rules, arbitrates, and puts the whole thing on air.
+
+    <div class="pull">
+      <p>
+        The infrastructure runs for 168 hours. The people don&rsquo;t.
+        <span>
+          Bridges accrue points at 1.5&times; while no member of their team is on
+          the floor. The most profitable thing a Red Faction can do is engineer
+          something that holds without them &mdash; and then leave it alone.
+        </span>
+      </p>
+    </div>
+
+    <p class="prose" style="margin-top:2.5rem">
+      Six Red Factions of three build proxy bridges into <a href="#range">the
+      Range</a>, a self-contained environment of fifteen services the organisers
+      own. Twelve Blue Faction players hold the gateway every packet crosses,
+      working three eight-hour watches around the clock. Ten organisers run the
+      Range, arbitrate, and put the whole thing on air.
     </p>
-    <p class="note" style="margin-top:2rem;max-width:70ch">
-      All flag targets are infrastructure operated by the event. Competitors
-      never point tooling at third-party services, and no real-world
-      censorship system is a target. Full rules of engagement ship with the
-      competitor handbook.
+    <p class="prose">
+      The scoreboard shows one number all week: aggregate Red bridge-hours,
+      against the line the Blue Faction is trying to hold it under.
     </p>
   </div>
 </section>
@@ -92,7 +107,7 @@
 <section class="section" id="factions">
   <div class="wrap">
     <p class="eyebrow"><b>02</b> Factions</p>
-    <h2>Three roles, two directions</h2>
+    <h2>Thirty competitors, two directions</h2>
     <p class="lede">
       Scoring is asymmetric by design. The factions are not playing the same
       game &mdash; they are playing against each other&rsquo;s definition of winning.
@@ -100,62 +115,75 @@
 
     <div class="factions">
       <article class="faction faction--red">
-        <p class="faction__id">Offense</p>
+        <p class="faction__id"><span>Offense</span> <b>18</b></p>
         <h3>Red Faction</h3>
         <p>
-          Small independent teams building proxy bridges, tunnelling through
-          active DPI, and pulling flags off blocked targets. Getting through
-          once is easy. Staying through is the game.
+          Six independent teams of three, building proxy bridges that tunnel
+          through active inspection into the Range. Getting through once is
+          easy. Staying through, unattended, for a week is the game.
         </p>
         <div class="faction__meta">
-          <span>Team size &nbsp;<b>2&ndash;4 players</b></span>
-          <span>Flag captures &nbsp;<b>50&ndash;200 pts</b></span>
-          <span>Daily uptime bonus &nbsp;<b>for bridges that survive undetected</b></span>
+          <span>Team size &nbsp;<b>3 players &times; 6 teams</b></span>
+          <span>Own hours &nbsp;<b>no required presence, any time of day</b></span>
+          <span>Scored on &nbsp;<b>bridge-hours, captures, first blood</b></span>
         </div>
       </article>
 
       <article class="faction faction--blue">
-        <p class="faction__id">Defense</p>
+        <p class="faction__id"><span>Defense</span> <b>12</b></p>
         <h3>Blue Faction</h3>
         <p>
-          One unified team holding the event&rsquo;s OPNsense gateway. They read
-          traffic anomalies, fingerprint TLS, and write drop rules &mdash; but
-          they score for the evidence, not the block.
+          One unified team on the OPNsense gateway, split into three watches for
+          genuine 24-hour cover. They score for evidence and for keeping the
+          Range usable &mdash; not for how much they can switch off.
         </p>
         <div class="faction__meta">
-          <span>Team size &nbsp;<b>3&ndash;5 players</b></span>
-          <span>Points for &nbsp;<b>IOC submissions filed before blocking</b></span>
-          <span>Also scores &nbsp;<b>audit-round findings</b></span>
+          <span>Roster &nbsp;<b>4 players &times; 3 watches</b></span>
+          <div class="watches">
+            <div><span>Dawn</span><b>00:00&ndash;08:00</b></div>
+            <div><span>Day</span><b>08:00&ndash;16:00</b></div>
+            <div><span>Night</span><b>16:00&ndash;00:00</b></div>
+          </div>
+          <span style="margin-top:0.35rem">Handover &nbsp;<b>briefed live, on air, 3&times; daily</b></span>
         </div>
       </article>
 
       <article class="faction faction--white">
-        <p class="faction__id">Control</p>
+        <p class="faction__id"><span>Control</span> <b>10</b></p>
         <h3>White Team</h3>
         <p>
-          Organisers and game masters. They own the infrastructure, enforce
-          the rules of engagement, arbitrate disputes, and run the broadcast
-          desk around the clock.
+          Organisers and game masters. They build and run the Range, enforce
+          the rules of engagement, arbitrate, run the broadcast desk, and hold
+          the welfare brief.
         </p>
         <div class="faction__meta">
-          <span>Role &nbsp;<b>Non-competing</b></span>
-          <span>Owns &nbsp;<b>targets, scoring, arbitration</b></span>
-          <span>Runs &nbsp;<b>the live production</b></span>
+          <span>Role &nbsp;<b>non-competing</b></span>
+          <span>On duty &nbsp;<b>arbiter + producer, always</b></span>
+          <span>Owns &nbsp;<b>the Range, scoring, arbitration</b></span>
         </div>
       </article>
     </div>
+
+    <p class="note" style="margin-top:2rem">
+      Blue is scored as a single unit across all three watches, so watches never
+      compete with one another and have every reason to hand over honestly.
+      <strong>The handover is a broadcast segment</strong> &mdash; the outgoing watch
+      briefs the incoming one on air, three times a day, on what they saw, what
+      they blocked, and what they think is still out there.
+    </p>
   </div>
 </section>
 
-<!-- ===================== ESCALATION LADDER ===================== -->
-<section class="section" id="escalation">
+<!-- ===================== THE WEEK ===================== -->
+<section class="section" id="week">
   <div class="wrap">
-    <p class="eyebrow"><b>03</b> Escalation</p>
-    <h2>The gateway gets stronger every day</h2>
+    <p class="eyebrow"><b>03</b> The week</p>
+    <h2>Both sides escalate</h2>
     <p class="lede">
-      Blue&rsquo;s capability unlocks on a fixed ladder. What worked on Monday is
-      detectable by Wednesday and dead by Friday. Red teams are not defending
-      a solution &mdash; they are defending a rate of adaptation.
+      The Blue Faction gains a capability layer every day. The Red Factions gain
+      bridge slots &mdash; room to compartmentalise, so losing one endpoint to a
+      honeypot no longer costs the week. The contested space between them closes
+      steadily, and runs out on Day 7.
     </p>
 
     <div class="ladder">
@@ -164,162 +192,289 @@
         <div class="day">
           <div class="day__head">
             <span class="day__n">Day 01</span>
-            <span class="day__title">Bootstrapping &amp; Baseline</span>
+            <span class="day__title">Baseline</span>
           </div>
-          <div class="day__chart" style="--tier:1">
-            <div class="day__blue"><span>URL blocklists</span></div>
+          <div class="day__unlock day__unlock--blue"><b>Blue</b>URL and domain blocklists.</div>
+          <div class="day__chart" style="--b:10%; --r:15%">
+            <div class="day__b">1 layer</div>
+            <div class="day__gap">Contested</div>
+            <div class="day__r">1 slot</div>
           </div>
-          <div class="day__red">
-            <b>Red</b>Arrival, hardware handoff, briefing. Game starts in the
-            afternoon against basic blocking.
-          </div>
+          <div class="day__unlock day__unlock--red"><b>Red</b>Arrival, hardware handoff, briefing. Game opens in the afternoon.</div>
         </div>
 
         <div class="day">
           <div class="day__head">
             <span class="day__n">Day 02</span>
-            <span class="day__title">The Cat and Mouse</span>
+            <span class="day__title">Cat and Mouse</span>
           </div>
-          <div class="day__chart" style="--tier:1">
-            <div class="day__blue"><span>IP &amp; DNS blocking</span></div>
+          <div class="day__unlock day__unlock--blue"><b>Blue</b>IP and DNS blocking.</div>
+          <div class="day__chart" style="--b:15%; --r:25%">
+            <div class="day__b">2 layers</div>
+            <div class="day__gap"></div>
+            <div class="day__r">2 slots</div>
           </div>
-          <div class="day__red">
-            <b>Red</b>First proxy scripts. Sysadmins begin hunting rogue
-            traffic by hand.
-          </div>
+          <div class="day__unlock day__unlock--red"><b>Red</b>Second slot opens. First bridges left running overnight.</div>
         </div>
 
         <div class="day">
           <div class="day__head">
             <span class="day__n">Day 03</span>
-            <span class="day__title">Escalation Phase I</span>
+            <span class="day__title">Inspection</span>
           </div>
-          <div class="day__chart" style="--tier:2">
-            <div class="day__blue"><span>+ Suricata / Zeek DPI</span></div>
+          <div class="day__unlock day__unlock--blue"><b>Blue</b>Suricata and Zeek deep packet inspection.</div>
+          <div class="day__chart" style="--b:20%; --r:25%">
+            <div class="day__b">3 layers</div>
+            <div class="day__gap"></div>
+            <div class="day__r">2 slots</div>
           </div>
-          <div class="day__red">
-            <b>Red</b>Plaintext tricks stop working. Evening social mixer &mdash;
-            a scheduled break, not an optional one.
-          </div>
+          <div class="day__unlock day__unlock--red"><b>Red</b>Pluggable transports unlock. Plaintext tricks stop working.</div>
         </div>
 
         <div class="day">
           <div class="day__head">
             <span class="day__n">Day 04</span>
-            <span class="day__title">Mid-Week Grind</span>
+            <span class="day__title">Fingerprints</span>
           </div>
-          <div class="day__chart" style="--tier:2">
-            <div class="day__blue"><span>+ TLS fingerprinting</span></div>
+          <div class="day__unlock day__unlock--blue"><b>Blue</b>TLS fingerprinting, JA3 and JA4.</div>
+          <div class="day__chart" style="--b:25%; --r:35%">
+            <div class="day__b">4 layers</div>
+            <div class="day__gap"></div>
+            <div class="day__r">3 slots</div>
           </div>
-          <div class="day__red">
-            <b>Red</b>High-value targets drop. Advanced obfuscation:
-            WebSocket transports, protocol mimicry.
-          </div>
+          <div class="day__unlock day__unlock--red"><b>Red</b>Protocol mimicry and WebSocket transports. High-value targets drop.</div>
         </div>
 
         <div class="day">
           <div class="day__head">
             <span class="day__n">Day 05</span>
-            <span class="day__title">Escalation Phase II</span>
+            <span class="day__title">Total War</span>
           </div>
-          <div class="day__chart" style="--tier:3">
-            <div class="day__blue"><span>+ DNS sinkholing<br>+ throttling</span></div>
+          <div class="day__unlock day__unlock--blue"><b>Blue</b>DNS sinkholing and throttling.</div>
+          <div class="day__chart" style="--b:30%; --r:35%">
+            <div class="day__b">5 layers</div>
+            <div class="day__gap"></div>
+            <div class="day__r">3 slots</div>
           </div>
-          <div class="day__red">
-            <b>Red</b>Total war. Bandwidth becomes a weapon. Night Ops bonus
-            round for teams still standing.
-          </div>
+          <div class="day__unlock day__unlock--red"><b>Red</b>Compartmentalised bridge pools. Bandwidth becomes a weapon.</div>
         </div>
 
         <div class="day">
           <div class="day__head">
             <span class="day__n">Day 06</span>
-            <span class="day__title">The Final Push</span>
+            <span class="day__title">Active Probing</span>
           </div>
-          <div class="day__chart" style="--tier:3">
-            <div class="day__blue"><span>+ Automated honeypots</span></div>
+          <div class="day__unlock day__unlock--blue"><b>Blue</b>Crafted probes against suspected endpoints, plus automated honeypots.</div>
+          <div class="day__chart" style="--b:35%; --r:45%">
+            <div class="day__b">6 layers</div>
+            <div class="day__gap"></div>
+            <div class="day__r">4 slots</div>
           </div>
-          <div class="day__red">
-            <b>Red</b>Compartmentalised bridge networks against active
-            deception. Attrition decides most of the board.
-          </div>
+          <div class="day__unlock day__unlock--red"><b>Red</b>Probe-resistant transports. The most realistic exchange of the week.</div>
         </div>
 
         <div class="day day--chaos">
           <div class="day__head">
             <span class="day__n">Day 07</span>
-            <span class="day__title">Chaos &amp; Conclusion</span>
+            <span class="day__title">Sudden Death</span>
           </div>
-          <div class="day__chart" style="--tier:4">
-            <div class="day__blue"><span>Sudden Death<br>hourly rotation</span></div>
+          <div class="day__unlock day__unlock--blue"><b>Blue</b>Hourly target rotation across the whole Range.</div>
+          <div class="day__chart" style="--b:40%; --r:45%">
+            <div class="day__b">7 layers</div>
+            <div class="day__gap">Close</div>
+            <div class="day__r">4 slots</div>
           </div>
-          <div class="day__red">
-            <b>Red</b>Target IPs rotate every hour. Game over at 13:00,
-            then awards, post-mortem and teardown.
-          </div>
+          <div class="day__unlock day__unlock--red"><b>Red</b>Full arsenal. Game closes 13:00, then awards and post-mortem.</div>
         </div>
 
       </div>
     </div>
     <p class="ladder__key">
-      <i class="key--blue">Blue Faction capability</i>
-      <i class="key--red">Red Faction response</i>
-      <i class="key--amber">Sudden Death</i>
+      <i class="key--blue">Blue capability layers</i>
+      <i class="key--gap">Contested space</i>
+      <i class="key--red">Red bridge slots</i>
     </p>
+
+    <div class="headline-rule">
+      <h3>How Sudden Death works</h3>
+      <p>
+        At the top of every hour the Range publishes its next target set to the
+        scoreboard. The catch: a rotated target is reachable only through a
+        bridge that was <strong>already live before the rotation</strong>, and new
+        bridges take twenty minutes to begin scoring.
+      </p>
+      <p>
+        You cannot rebuild your way through Day 7. The teams still standing at
+        13:00 are the ones that spent six days engineering for persistence
+        instead of chasing captures &mdash; which is the entire thesis of the
+        event, collected in one morning.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- ===================== NETWORK ===================== -->
-<section class="section" id="network">
+<!-- ===================== SCORING ===================== -->
+<section class="section" id="scoring">
   <div class="wrap">
-    <p class="eyebrow"><b>04</b> Architecture</p>
-    <h2>Two networks, one venue</h2>
+    <p class="eyebrow"><b>04</b> Scoring</p>
+    <h2>How you win</h2>
     <p class="lede">
-      The Blue Faction is expected to break things. That is the point &mdash;
-      which is why the thing they can break is kept strictly away from the
-      thing that keeps the event running.
+      Two independent verdicts, because the factions are on different scales and
+      pretending otherwise would flatter nobody. A Red champion is crowned among
+      the six teams. Blue either holds the week or does not.
+    </p>
+
+    <div class="scores">
+      <div class="score score--red">
+        <p class="score__id">Offense</p>
+        <h3>Red Faction</h3>
+        <table>
+          <thead><tr><th>Source</th><th>Points</th></tr></thead>
+          <tbody>
+            <tr><td>Flag capture<small>By difficulty band</small></td><td>50&ndash;200</td></tr>
+            <tr class="pos"><td>Bridge-hours<small>Per hour live, carrying traffic, undetected</small></td><td>10 / hr</td></tr>
+            <tr class="pos"><td>Unattended multiplier<small>While no team member is on the floor</small></td><td>&times;1.5</td></tr>
+            <tr><td>First blood<small>First capture of each flag</small></td><td>+50</td></tr>
+            <tr class="neg"><td>Scope violation<small>Any traffic aimed outside the Range</small></td><td>DQ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="score score--blue">
+        <p class="score__id">Defense</p>
+        <h3>Blue Faction</h3>
+        <table>
+          <thead><tr><th>Source</th><th>Points</th></tr></thead>
+          <tbody>
+            <tr><td>Bridge detection<small>Per distinct bridge identified</small></td><td>100</td></tr>
+            <tr><td>IOC filing<small>Filed within 15 min of blocking</small></td><td>50</td></tr>
+            <tr><td>Disclosure Order return<small>Per order yielding a confirmed indicator</small></td><td>25</td></tr>
+            <tr class="pos"><td>Service Floor<small>Per day the Range stays usable</small></td><td>500</td></tr>
+            <tr class="neg"><td>False positive<small>Per clean session blocked in error</small></td><td>&minus;75</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="headline-rule">
+      <h3>The Service Floor</h3>
+      <p>
+        The Blue Faction has to keep the Range <strong>usable</strong> while
+        defending it. Synthetic probes run continuously against all fifteen
+        services from a reference client; if availability drops below 95% in any
+        rolling hour, Blue forfeits that day&rsquo;s Service Floor award.
+      </p>
+      <p>
+        This is the rule that makes the defensive side a real job. Switching
+        everything off is not a win, it is a forfeit &mdash; exactly as it would be
+        for any defender who is not permitted to take the business offline to
+        stop an intruder.
+      </p>
+    </div>
+
+    <div class="headline-rule">
+      <h3>Disclosure Orders</h3>
+      <p>
+        Three times a day, the Blue Faction may compel one Red team to disclose
+        the full configuration of one named bridge endpoint, truthfully, within
+        ten minutes. A team may refuse once per event at a cost of 300 points,
+        and the refusal is announced on the broadcast. False disclosure is
+        disqualification.
+      </p>
+      <p>
+        It is the sharpest instrument in the game and it is not a technical one
+        &mdash; which is the point. Infrastructure is rarely taken apart by
+        packets alone.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RANGE + NETWORK ===================== -->
+<section class="section" id="range">
+  <div class="wrap">
+    <p class="eyebrow"><b>05</b> The Range</p>
+    <h2>Everything you attack is ours</h2>
+    <p class="lede">
+      The Range is fifteen web services built and hosted by the White Team:
+      static content, authenticated apps, APIs, and one deliberately enormous
+      file service that exists so that throttling matters. It is the whole of
+      the target space, and it is the whole of the permitted space.
+    </p>
+
+    <p class="note" style="margin-top:2rem">
+      <strong>Nothing outside the Range is a target</strong> &mdash; not the public
+      internet, not any third-party service, and not any real censorship system.
+      The gateway enforces a destination allowlist, so out-of-scope traffic
+      cannot leave even if someone tries: scope is a property of the network
+      rather than of anyone&rsquo;s good behaviour. Attempting to leave it is
+      disqualifying, and it is logged. Techniques that would require abusing a
+      third party&rsquo;s infrastructure &mdash; domain fronting among them &mdash; are
+      played against targets we host for the purpose.
+    </p>
+
+    <h3 style="margin-top:3.5rem">Three networks</h3>
+    <p class="prose" style="margin-top:1rem">
+      The Blue Faction is expected to break things. That is the job &mdash; which
+      is why what they can break is kept strictly apart from what keeps the event
+      running, and why no competitor machine has a route to anything but the
+      game.
     </p>
 
     <div class="vlans">
       <article class="vlan vlan--game">
         <p class="vlan__id">VLAN 10</p>
-        <h3>The Game Network</h3>
+        <h3>Game</h3>
         <p>
-          Every competitor packet routes through the Blue Faction&rsquo;s OPNsense
-          gateway. This is the battleground: inspected, throttled, sinkholed
-          and blocked in real time.
+          Every competitor packet routes through the Blue Faction&rsquo;s gateway.
+          Inspected, throttled, sinkholed and blocked in real time.
         </p>
         <ul class="spec">
-          <li>OPNsense gateway on dedicated appliance</li>
+          <li>OPNsense on dedicated appliance</li>
           <li>Suricata and Zeek from Day 3</li>
-          <li>Full Blue Faction visibility and control</li>
-          <li>Carries all flag traffic</li>
+          <li>Egress <b>allowlisted to the Range</b></li>
+          <li>Full Blue visibility and control</li>
         </ul>
       </article>
 
       <article class="vlan vlan--prod">
         <p class="vlan__id">VLAN 20</p>
-        <h3>The Production Network</h3>
+        <h3>Production</h3>
         <p>
-          Strictly whitelisted and out of play. Staff telemetry, internal
-          chat and the video feeds live here. The Blue Faction has no
-          visibility and no control over it.
+          Staff telemetry, internal chat and the broadcast encoder chain. No
+          competitor device touches it at any point.
         </p>
         <ul class="spec">
-          <li>Broadcast video and staff telemetry only</li>
-          <li>Egress locked to the production hosts</li>
-          <li>No competitor-routable path to the internet</li>
-          <li>Switch management held by White Team only</li>
+          <li>Staff and production only</li>
+          <li>Switch management lives here</li>
+          <li><b>Blue holds no switch credentials</b></li>
+          <li>No competitor-routable path</li>
+        </ul>
+      </article>
+
+      <article class="vlan vlan--capture">
+        <p class="vlan__id">VLAN 30</p>
+        <h3>Capture &mdash; one-way</h3>
+        <p>
+          Video only, and only outward. The broadcast path is not a network the
+          competitor can use, and it is watched.
+        </p>
+        <ul class="spec">
+          <li><b>NDI|HX</b>, ~15 Mbps per stream</li>
+          <li>Port ACLs: NDI to the broadcast host only</li>
+          <li>No gateway, no DNS, no station-to-station</li>
+          <li>IP forwarding disabled on the image</li>
+          <li>Alerts on any non-NDI traffic</li>
+          <li>Feature stations use hardware encoders</li>
         </ul>
       </article>
     </div>
 
-    <p class="note" style="margin-top:2rem;max-width:74ch">
-      Competitor machines contribute a video feed to VLAN 20 through a
-      one-way capture path. There is no general-purpose route from a
-      competitor workstation onto the production network &mdash; using the
-      broadcast path to move flag traffic is disqualifying, and it is
-      instrumented.
+    <p class="note" style="margin-top:2rem">
+      Competitor stations run a <strong>Linux</strong> golden image &mdash; every tool
+      that matters here is Linux-native, from Wireshark and Zeek to every
+      transport a Red Faction will reach for. Using the capture path to move game
+      traffic is disqualifying, and it is instrumented.
     </p>
   </div>
 </section>
@@ -327,23 +482,25 @@
 <!-- ===================== BROADCAST ===================== -->
 <section class="section" id="broadcast">
   <div class="wrap">
-    <p class="eyebrow"><b>05</b> Broadcast</p>
-    <h2>Every screen is on air</h2>
+    <p class="eyebrow"><b>06</b> Broadcast</p>
+    <h2>Seven days on air</h2>
     <p class="lede">
-      Censorfest is produced like a match, not a meetup. A commentary desk
-      runs off an OBS production rig that can cut to any competitor&rsquo;s screen
-      live, with shoutcasters calling the network as it happens.
+      Censorfest is produced like a match, not a meetup. A commentary desk cuts
+      between competitor screens, gateway dashboards and the scoreboard &mdash;
+      and three times a day, to the watch handover, which is the most
+      under-televised thing in this industry.
     </p>
     <div class="split">
       <div>
         <h3>What goes out</h3>
         <p>
-          Competitor screens, gateway dashboards, the scoreboard, and desk
-          commentary &mdash; mixed live and streamed for the full seven days.
+          Live production for the full 168 hours, with the bridge-hour line on
+          screen throughout and a full archive afterwards.
         </p>
         <ul class="spec">
           <li>Multi-source production switcher</li>
           <li>Live gateway and scoring overlays</li>
+          <li>Three watch handovers daily</li>
           <li>Full VOD archive after the event</li>
           <li>Platform <span class="tbc">TBC</span></li>
         </ul>
@@ -356,9 +513,9 @@
         </p>
         <ul class="spec">
           <li>Opt-in media release, signed at registration</li>
-          <li>Persistent on-screen capture indicator</li>
-          <li>Physical privacy cut on every station</li>
-          <li>Broadcast delay with a producer kill switch</li>
+          <li><b>Persistent on-screen capture indicator</b> &mdash; never silent</li>
+          <li>Physical privacy cut at every station</li>
+          <li>60-second delay with a producer kill switch</li>
           <li>Event accounts only &mdash; never personal logins</li>
         </ul>
       </div>
@@ -366,45 +523,120 @@
   </div>
 </section>
 
+<!-- ===================== DUTY OF CARE ===================== -->
+<section class="section" id="care">
+  <div class="wrap">
+    <p class="eyebrow"><b>07</b> Duty of care</p>
+    <h2>Rest is part of the format</h2>
+    <p class="lede">
+      Not a concession bolted onto it. Every competitor is off-floor for eight
+      hours in every twenty-four, and the scoring is built so that obeying that
+      rule costs you nothing &mdash; your bridges earn more while you are asleep
+      than while you are watching them.
+    </p>
+
+    <div class="care">
+      <article>
+        <h4>Eight in twenty-four</h4>
+        <p>
+          Off-floor rest is required and badge-enforced. No scoring mechanic
+          anywhere in the event rewards being awake at 04:00.
+        </p>
+      </article>
+      <article>
+        <h4>Medical cover</h4>
+        <p>
+          First aid cover with a named responder on duty at all times, plus a
+          quiet room away from the floor and off camera.
+        </p>
+      </article>
+      <article>
+        <h4>Code of conduct</h4>
+        <p>
+          Published with applications and agreed at registration. Named contacts,
+          and a reporting path that does not run through your own faction.
+        </p>
+      </article>
+      <article>
+        <h4>Your own room</h4>
+        <p>
+          Single occupancy by default. Sharing is opt-in with a named partner,
+          confirmed with you before the event and never assigned blind.
+        </p>
+      </article>
+    </div>
+
+    <p class="note" style="margin-top:2rem">
+      <strong>On audits:</strong> inspections cover event-issued hardware and
+      competitor desks only. They are announced, conducted by named White Team
+      staff with the competitor present, and never extend to persons or personal
+      belongings. In-game infrastructure disclosure is handled by
+      <a href="#scoring">Disclosure Orders</a>, which is a scoring mechanic and
+      not a search.
+    </p>
+  </div>
+</section>
+
 <!-- ===================== SPONSORS ===================== -->
 <section class="section" id="sponsors">
   <div class="wrap">
-    <p class="eyebrow"><b>06</b> Partnership</p>
+    <p class="eyebrow"><b>08</b> Partnership</p>
     <h2>Sponsorship tiers</h2>
     <p class="lede">
-      Seven days of continuous broadcast in front of thirty vetted network
-      and security engineers, with an archive that outlives the event. Tiers
-      below; full prospectus and audience numbers on request.
+      Seven days of continuous broadcast in front of thirty vetted network and
+      security engineers, with an archive that outlives the event. Nine slots
+      across six tiers, so no single conversation is load-bearing. Full
+      prospectus and audience numbers on request.
     </p>
 
     <div class="tiers">
       <article class="tier tier--title">
-        <p class="tier__name"><small>Tier 1</small>Title &amp; Presenting</p>
-        <p>Naming rights, permanent broadcast overlay placement, first-look recruiting access to every competitor.</p>
-        <p class="tier__price">USD 25,000</p>
+        <p class="tier__name"><small>Tier 1</small>Title</p>
+        <p>Naming rights, permanent broadcast overlay, first-look recruiting access to every competitor.</p>
+        <p class="tier__slots">1 slot</p>
+        <p class="tier__price">USD 30,000</p>
       </article>
       <article class="tier">
         <p class="tier__name"><small>Tier 2</small>Infrastructure</p>
-        <p>Gateway and battle-station branding, hardware or cloud credit offset, technical segment on the broadcast.</p>
-        <p class="tier__price">USD 10,000</p>
+        <p>Gateway and station branding, hardware or cloud credit offset, technical segment on the broadcast.</p>
+        <p class="tier__slots">2 slots</p>
+        <p class="tier__price">USD 12,000</p>
       </article>
       <article class="tier">
-        <p class="tier__name"><small>Tier 3</small>Survival &amp; Logistics</p>
-        <p>Catering and the midnight &ldquo;Fuel Drop&rdquo; rounds, with on-site and on-stream presence at every one.</p>
+        <p class="tier__name"><small>Tier 3</small>The Range</p>
+        <p>The target environment carries your name, plus a Range architecture segment on the broadcast.</p>
+        <p class="tier__slots">1 slot</p>
+        <p class="tier__price">USD 8,000</p>
+      </article>
+      <article class="tier">
+        <p class="tier__name"><small>Tier 4</small>Watch</p>
+        <p>Name one of the three Blue watches &mdash; Dawn, Day or Night &mdash; and its live handover segments.</p>
+        <p class="tier__slots">3 slots</p>
+        <p class="tier__price">USD 6,000</p>
+      </article>
+      <article class="tier">
+        <p class="tier__name"><small>Tier 5</small>Logistics</p>
+        <p>Catering and the midnight Fuel Drop rounds, with on-site and on-stream presence at every one.</p>
+        <p class="tier__slots">2 slots</p>
         <p class="tier__price">USD 5,000</p>
       </article>
       <article class="tier">
-        <p class="tier__name"><small>Tier 4</small>Swag &amp; Community</p>
-        <p>Competitor t-shirt branding, welcome-bag inserts, logo on the event site and closing credits.</p>
-        <p class="tier__price">USD 1,000&ndash;2,500</p>
+        <p class="tier__name"><small>Tier 6</small>Community</p>
+        <p>Competitor shirt branding, welcome-bag inserts, logo on the event site and closing credits.</p>
+        <p class="tier__slots">Open</p>
+        <p class="tier__price">USD 1,500&ndash;2,500</p>
       </article>
     </div>
 
-    <p class="note" style="margin-top:2rem;max-width:74ch">
-      Censorfest is a red-team versus blue-team training and talent event run
-      entirely on infrastructure the organisers own. Sponsorship supports
-      competitor hardware, venue, accommodation and catering for the full
-      week.
+    <p class="note" style="margin-top:2rem">
+      Censorfest is a red-team versus blue-team training and talent event, run
+      end to end on infrastructure the organisers own. For enterprise security
+      partners the draw is a live security operation under seven days of
+      sustained pressure, with three televised watch handovers a day &mdash; the
+      part of the job nobody ever gets to show. Sponsorship funds competitor
+      hardware, venue, accommodation and catering for the full week.
+      In-kind hardware and cloud partnerships are welcome against the
+      Infrastructure and Range tiers.
     </p>
   </div>
 </section>
@@ -412,88 +644,114 @@
 <!-- ===================== APPLY ===================== -->
 <section class="section" id="apply">
   <div class="wrap">
-    <p class="eyebrow"><b>07</b> Take part</p>
+    <p class="eyebrow"><b>09</b> Take part</p>
     <h2>Applications</h2>
 
     <div class="split">
       <div>
         <h3>Compete</h3>
         <p>
-          Thirty places across the Red and Blue Factions. Applications are
-          reviewed as a team where possible &mdash; tell us who you&rsquo;d bring and
-          what you&rsquo;d build. Hardware, lodging and food for the week are
-          provided.
+          Thirty places: eighteen across six Red Factions, twelve across three
+          Blue watches. Red applications are reviewed as a team of three where
+          possible &mdash; tell us who you would bring and what you would build.
+          Hardware, a room and food for the week are provided.
         </p>
         <a class="btn btn--primary" href="mailto:apply@censorfest.example">Apply to compete</a>
         <ul class="spec" style="margin-top:1.75rem">
           <li>Applications open <span class="tbc">TBC</span></li>
-          <li>Competitor fee <span class="tbc">TBC</span></li>
+          <li>Deposit <b>USD 200</b>, refunded on attendance</li>
+          <li>Waived on request, no explanation needed</li>
           <li>Must attend all seven days</li>
         </ul>
       </div>
       <div>
         <h3>Sponsor</h3>
         <p>
-          Talk to us about a tier, or about something that isn&rsquo;t on the list.
-          We&rsquo;ll send the full prospectus, the broadcast layout and the
-          recruiting pipeline detail.
+          Talk to us about a tier, about an in-kind partnership, or about
+          something that is not on the list. We will send the full prospectus,
+          the broadcast layout and the recruiting pipeline detail.
         </p>
         <a class="btn" href="mailto:partners@censorfest.example">Request the prospectus</a>
         <ul class="spec" style="margin-top:1.75rem">
           <li>Prospectus deck available on request</li>
           <li>Custom and in-kind packages welcome</li>
-          <li>Deadline for broadcast branding <span class="tbc">TBC</span></li>
+          <li>Broadcast branding deadline <span class="tbc">TBC</span></li>
         </ul>
       </div>
     </div>
 
     <div class="faq">
       <details>
-        <summary>Do I need to stay awake for 168 hours?</summary>
+        <summary>Do I have to stay awake for 168 hours?</summary>
         <p>
-          No. The event runs continuously; competitors do not. Scheduled rest
-          windows are part of the format and no scoring mechanic rewards
-          skipping sleep. Beds are ten minutes away and yours for the week.
+          No, and you are not allowed to. Every competitor is off-floor for eight
+          hours in every twenty-four. The format is built so this costs you
+          nothing: Red bridges score 1.5&times; while their team is away, and Blue
+          watches hand over to a rested crew. The clock runs continuously; you do
+          not.
+        </p>
+      </details>
+      <details>
+        <summary>What does &ldquo;bridge-hours&rdquo; actually mean?</summary>
+        <p>
+          Ten points for every hour a bridge is live, carrying real traffic, and
+          undetected by the Blue Faction &mdash; multiplied by 1.5 for any hour
+          your whole team is off the floor. A bridge that survives one night
+          unattended is worth more than several captures. It is the closest thing
+          this event has to a thesis.
         </p>
       </details>
       <details>
         <summary>What hardware do I bring?</summary>
         <p>
-          None. Every competitor gets a standardised event laptop from a
-          common image with the toolchain pre-installed, so nobody wins on
-          equipment. Personal devices stay off the game network.
+          None. Every competitor gets a standardised event laptop from a common
+          Linux image with the toolchain pre-installed, so nobody wins on
+          equipment. Personal devices stay off the game network entirely.
         </p>
       </details>
       <details>
         <summary>What exactly are the targets?</summary>
         <p>
-          Web services built and hosted by the White Team for the event.
-          Nothing on the internet at large is in scope, and directing tooling
-          at anything outside the target range is an immediate disqualification.
+          Fifteen web services built and hosted by the White Team, collectively
+          the Range. Nothing on the wider internet is in scope, the gateway
+          enforces an allowlist so out-of-scope traffic cannot leave, and
+          directing tooling outside the Range is an immediate disqualification.
         </p>
       </details>
       <details>
         <summary>Is my screen really on the stream?</summary>
         <p>
           Any competitor screen can be cut to live, which is why capture is
-          opt-in at registration, indicated on-screen whenever it is running,
-          and cuttable by you at the station. Log into event accounts only.
+          opt-in at registration, indicated on screen whenever it is running, and
+          cuttable by you at the station. There is a 60-second delay with a
+          producer kill switch. Log into event accounts only.
+        </p>
+      </details>
+      <details>
+        <summary>Can the Blue Faction just block everything?</summary>
+        <p>
+          It would lose them the week. The Service Floor requires the Range to
+          stay above 95% availability in any rolling hour, measured continuously
+          by synthetic probes; below that, Blue forfeits the day&rsquo;s award. They
+          have to defend the network without taking it away, which is the actual
+          job.
         </p>
       </details>
       <details>
         <summary>Is accommodation included?</summary>
         <p>
-          Yes &mdash; lodging for the full week, three meals a day, and a
-          24-hour supply of coffee and snacks. Room-sharing arrangements are
-          confirmed with you before the event, never assigned blind.
+          Yes &mdash; a room for the full week, three meals a day, and a 24-hour
+          supply of coffee and snacks. Single occupancy by default; sharing is
+          opt-in with a named partner and confirmed with you beforehand.
         </p>
       </details>
       <details>
-        <summary>What are the rules on physical audits?</summary>
+        <summary>Will anyone search me or my belongings?</summary>
         <p>
-          Audit rounds cover event-issued equipment and competitor desks
-          only. They are announced, conducted by named White Team staff, and
-          never extend to persons or personal belongings.
+          No. Inspections cover event-issued hardware and competitor desks only,
+          are announced in advance, and happen with you present. In-game
+          disclosure of infrastructure is handled by Disclosure Orders, which is
+          a scoring mechanic you can refuse.
         </p>
       </details>
     </div>

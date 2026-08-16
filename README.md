@@ -1,68 +1,103 @@
 # Censorfest
 
-Event website for Censorfest — a 168-hour asymmetric adversarial CTF and live
-broadcast network crucible.
+Event website and operations plan for Censorfest — a 168-hour asymmetric
+adversarial CTF and live broadcast network crucible.
 
 ## Contents
 
 | Path | What it is |
 |---|---|
 | `index.html` | The site. Single page, no build step, no dependencies. |
-| `assets/styles.css` | All styling. Design tokens are at the top of the file. |
+| `assets/styles.css` | All styling. Design tokens at the top of the file. |
 | `assets/site.js` | Hero canvas ambience only. The site works fine without it. |
-| `REVIEW.md` | **Review of the master plan.** Read this — it flags several issues that need fixing before the event can run as designed. |
+| `PLAN.md` | **Operations plan v4.0** — the redesigned event. |
+| `REVIEW.md` | Review of the original v3.0 plan. The record of *why* v4.0 differs. |
+
+Read `PLAN.md` for what the event now is; `REVIEW.md` for the findings that
+produced it.
 
 ## Running it
 
-It is a static site with no build step. Open `index.html`, or:
+Static site, no build step. Open `index.html`, or:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
-
-Deploys as-is to GitHub Pages, Netlify, Cloudflare Pages or any static host — just
+Deploys as-is to GitHub Pages, Netlify, Cloudflare Pages or any static host —
 point it at the repository root.
+
+## What changed in v4.0
+
+v3.0 asked thirty people to endure 168 hours, which generated most of the
+problems in `REVIEW.md`. v4.0 inverts the premise:
+
+> The infrastructure runs for 168 hours. The people don't.
+
+Red Factions are scored on **bridge-hours** — how long a tunnel survives while
+unattended and undetected, at a 1.5× multiplier when the team is off the floor.
+You cannot babysit something you're scored on for a week, so rest stops being a
+rule competitors resent and becomes the format working as designed.
+
+Everything else follows from that, or from a specific review finding:
+
+- **Factions restructured** — Red 18 in six teams, Blue 12 in three watches for
+  real 24-hour cover. v3.0's 3–5 person Blue roster could not cover 168 hours.
+- **Both ladders escalate.** Blue gains a capability layer per day; Red gains
+  bridge slots. The contested space closes across the week.
+- **The Service Floor** — Blue must hold the Range above 95% availability, so
+  "block everything" is a forfeit rather than a winning strategy.
+- **Disclosure Orders** replace physical searches of competitors — an in-game
+  legal instrument instead of a legal problem.
+- **Three VLANs.** The capture path is one-way, ACL'd and instrumented; v3.0
+  dual-homed every competitor onto an unblockable network, which broke the game.
+- **NDI|HX** instead of full NDI — ~450 Mbps across 30 streams rather than 3.7 Gbps.
+- **The Range** — fifteen organiser-owned services, gateway-allowlisted, so scope
+  is enforced by the network rather than by good behaviour.
+- **Budget rebuilt** at consistent headcount with the missing lines restored, plus
+  a ~USD 16k pilot that makes the flagship fundable.
 
 ## Design
 
-A single committed dark identity, since this is a nocturnal 24/7 broadcast brand.
-The palette is built around the event's own structure — two opposed factions
-separated by an inspection layer:
+A single committed dark identity — this is a nocturnal 24/7 broadcast brand.
+The palette comes from the event's own structure: two opposed forces separated
+by an inspection layer.
 
 - **Red Faction** `#FF5A36`, **Blue Faction** `#6EA8FF`, **White Team / escalation** `#E9B949`
 - Ground `#0A0E13`, surface `#121820`, hairline `#263140`, text `#D9E2EC`
-- Monospace as the display face; system sans for body text. No webfonts are loaded,
+- Monospace as the display face; system sans for body. No webfonts are loaded,
   so there is nothing to fail on a slow connection.
 
-The escalation ladder in §3 is the signature element: the height of each day's blue
-block is that day's capability tier straight out of the operations plan, so the
-staircase is real data rather than decoration.
+**The Week** (§3) is the signature element: Blue's capability descends from the
+top of each column, Red's bridge slots rise from the bottom, and the gap between
+them narrows from 75% to 15% across the seven days. Both series are real values
+from `PLAN.md`, and the columns share row lines via CSS subgrid so the bars can
+actually be compared across days.
 
-The hero canvas draws packets crossing an inspection line, some passing and some
-dropped. It is disabled under `prefers-reduced-motion` and pauses on hidden tabs.
+The hero canvas draws traffic crossing an inspection line — most packets short,
+a few long streaks that clear it and keep going, which is what the event scores.
+Disabled under `prefers-reduced-motion`; pauses on hidden tabs.
 
 ## Before this goes live
 
-Two things need your attention.
-
-**1. Placeholders.** Everything not yet decided in the master plan is marked with a
-dashed amber `TBC` chip rather than invented. Search the HTML for `class="tbc"`:
+**Placeholders.** Everything the plan hasn't decided is marked with a dashed
+amber `TBC` chip rather than invented. Search the HTML for `class="tbc"`:
 
 - Dates, venue and city
 - Broadcast platform
-- Application open date and competitor fee
+- Application open date
 - Sponsor branding deadline
 
-Contact addresses are `apply@censorfest.example` and `partners@censorfest.example` —
-`.example` is a reserved domain, so these are inert until you replace them.
+Contact addresses are `apply@censorfest.example` and
+`partners@censorfest.example` — `.example` is a reserved domain, so these are
+inert until replaced.
 
-**2. The site states commitments the plan does not yet implement.** To be publishable
-without creating legal exposure, the copy commits Censorfest to several policies that
-the master plan currently lacks — organiser-owned targets only, opt-in capture consent,
-an on-screen capture indicator, a broadcast delay and kill switch, equipment-only
-audits, and scheduled rest. These are the right commitments, but the plan has to
-actually adopt them or the site is promising something you don't deliver.
+**Two open decisions from `PLAN.md` §12** affect the site copy directly:
 
-`REVIEW.md` §1 and §3 cover both in detail.
+1. **Pilot or flagship first.** The site currently describes the flagship. If you
+   run Censorfest Zero first (recommended — §10.2), the vitals and Apply section
+   need its numbers instead.
+2. **The name.** `Censorfest` reads as celebrating censorship, which is backwards
+   from what the event does, and it is the hardest word in the sponsor pitch.
+   Kept here because it's your brand and your call, but it is cheap to change now
+   and expensive later.

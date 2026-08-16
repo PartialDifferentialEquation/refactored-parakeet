@@ -45,11 +45,15 @@
   }
 
   function makePacket(x) {
+    // A few long streaks read as bridges that are holding — the thing the
+    // event actually scores. The rest is ordinary traffic, a third of which
+    // gets caught at the inspection line.
+    var bridge = Math.random() < 0.18;
     return {
       x: x,
-      len: rand(10, 34),
-      // Roughly a third of traffic gets caught at the inspection line.
-      blocked: Math.random() < 0.34,
+      len: bridge ? rand(90, 190) : rand(10, 34),
+      bridge: bridge,
+      blocked: !bridge && Math.random() < 0.4,
       dropped: false
     };
   }
@@ -92,7 +96,8 @@
           alpha = p.fade * 0.55;
           colour = BLUE;
         } else {
-          alpha = p.x > inspectX ? 0.4 : 0.62;
+          // A bridge that has cleared the line is the strongest mark on screen.
+          alpha = p.bridge ? (p.x > inspectX ? 0.72 : 0.5) : (p.x > inspectX ? 0.34 : 0.6);
           colour = RED;
         }
 
