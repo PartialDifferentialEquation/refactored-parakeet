@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Censorfest — Crew</title>
+<meta name="description" content="The White Team site: ten roles, the duty roster, the daily runbook, arbitration procedure, incident handling and the pre-event build.">
+<meta name="theme-color" content="#0A0E13">
+<meta property="og:title" content="Censorfest — Crew">
+<meta property="og:description" content="Ten roles, the duty roster, the daily runbook, arbitration and the pre-event build.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0E13'/%3E%3Crect x='3' y='14' width='13' height='3' fill='%23FF5A36'/%3E%3Crect x='20' y='14' width='9' height='3' fill='%236EA8FF'/%3E%3Crect x='17.5' y='4' width='1' height='24' fill='%23E9B949'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="p-crew">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__mark" href="index.html">Censor<span>fest</span></a>
+    <ul class="nav__links">
+      <li><a href="#roles">Roles</a></li>
+      <li><a href="#roster">Roster</a></li>
+      <li><a href="#runbook">Runbook</a></li>
+      <li><a href="#arbitration">Arbitration</a></li>
+      <li><a href="#incidents">Incidents</a></li>
+      <li><a href="#build">The build</a></li>
+    </ul>
+    <div class="nav__sites">
+      <a href="index.html">Compete</a>
+      <a href="crew.html" aria-current="page">Crew</a>
+      <a href="sponsors.html">Partner</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <canvas class="hero__canvas" id="flow" aria-hidden="true"></canvas>
+  <div class="wrap hero__inner">
+    <p class="hero__tag">For the White Team <em>&#47;&#47;</em> operations reference</p>
+    <h1>
+      Ten people<br>
+      <span class="h1__b">run the week</span>
+    </h1>
+    <p class="hero__lede">
+      The White Team builds the Range, holds the rules, keeps the broadcast
+      honest and gets forty people through seven days intact. Nobody in this
+      faction competes, and <b>nobody works a 168-hour shift</b> either &mdash; the
+      roster is the first thing on this page for a reason.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#join">Join the crew</a>
+      <a class="btn" href="#runbook">The runbook</a>
+    </div>
+
+    <dl class="vitals">
+      <div><dt>Crew</dt><dd>10</dd></div>
+      <div><dt>Roles</dt><dd>5</dd></div>
+      <div><dt>Crew shifts</dt><dd>3</dd></div>
+      <div><dt>People to cover</dt><dd>40</dd></div>
+      <div><dt>Build runway</dt><dd>9 mo</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ===================== ROLES ===================== -->
+<section class="section section--flush" id="roles">
+  <div class="wrap">
+    <p class="eyebrow"><b>01</b> Roles</p>
+    <h2>Five jobs, ten seats</h2>
+    <p class="lede">
+      Every seat is named and rostered. If a responsibility below has nobody&rsquo;s
+      name against it on the day, that is a hole in the event, not a detail to
+      sort out later.
+    </p>
+
+    <div class="cards cards--3">
+      <article class="card card--amber">
+        <p class="card__id"><span>Range</span> <b>3</b></p>
+        <h3>Range Engineering</h3>
+        <p>
+          Owns the fifteen target services end to end: build, deploy, flag
+          rotation, the synthetic probe fleet that measures the Service Floor,
+          and the flow-record pipeline competitors read on delay.
+        </p>
+        <ul class="spec">
+          <li>Range build and freeze, T&minus;2 weeks</li>
+          <li>Flag placement and rotation schedule</li>
+          <li>Service Floor probes and their calibration</li>
+          <li>Sudden Death rotation on Day 7</li>
+          <li>On call for Range faults, always</li>
+        </ul>
+      </article>
+
+      <article class="card card--amber">
+        <p class="card__id"><span>Infra</span> <b>2</b></p>
+        <h3>Gateway &amp; Infrastructure</h3>
+        <p>
+          The three VLANs, the switch, the OPNsense baseline Blue inherits, the
+          capture chain, and the competitor image. Holds switch management
+          credentials, which the Blue Faction never does.
+        </p>
+        <ul class="spec">
+          <li>VLAN 10 / 20 / 30 and their ACLs</li>
+          <li>Golden image build and per-station verification</li>
+          <li>Capture path monitoring &mdash; alerts on non-NDI traffic</li>
+          <li>VPS pool allocation to Red teams</li>
+          <li>Spare switch, spare laptops, spare everything</li>
+        </ul>
+      </article>
+
+      <article class="card card--amber">
+        <p class="card__id"><span>Rules</span> <b>2</b></p>
+        <h3>Arbitration &amp; Scoring</h3>
+        <p>
+          The referees. Score reconciliation, Disclosure Order adjudication,
+          scope rulings, and disqualification calls. At least one arbiter is on
+          duty at every moment of the event.
+        </p>
+        <ul class="spec">
+          <li>Rulings within 15 minutes of a call</li>
+          <li>Daily score publication and dispute window</li>
+          <li>Disclosure Order issue and verification</li>
+          <li>DQ calls &mdash; requires two arbiters to concur</li>
+          <li>Rulings log, published daily</li>
+        </ul>
+      </article>
+
+      <article class="card card--amber">
+        <p class="card__id"><span>Broadcast</span> <b>2</b></p>
+        <h3>Production</h3>
+        <p>
+          The desk. Production switching, commentary, overlays, the watch
+          handover segments, and the VOD archive. The producer on duty holds
+          the kill switch and needs nobody&rsquo;s approval to use it.
+        </p>
+        <ul class="spec">
+          <li>60-second delay, kill switch on the desk</li>
+          <li>Three handover segments daily</li>
+          <li>Scoreboard and gateway overlays</li>
+          <li>Credential and personal-data spotting</li>
+          <li>VOD cut and publication after the event</li>
+        </ul>
+      </article>
+
+      <article class="card card--good">
+        <p class="card__id"><span>Welfare</span> <b>1</b></p>
+        <h3>Welfare &amp; Floor</h3>
+        <p>
+          Rest enforcement, first-aid liaison, the quiet room, catering
+          timing, and one of the two named code-of-conduct contacts. Has the
+          authority to pull anybody off the floor, including crew.
+        </p>
+        <ul class="spec">
+          <li>Badge-enforced 8-in-24 rest compliance</li>
+          <li>First-aid responder liaison</li>
+          <li>Code of conduct contact</li>
+          <li><b>May stand anybody down, without appeal</b></li>
+          <li>On floor 08:00&ndash;24:00, on call otherwise</li>
+        </ul>
+      </article>
+
+      <article class="card card--quiet">
+        <p class="card__id"><span>Note</span></p>
+        <h4>Ten is the floor, not the target</h4>
+        <p>
+          Ten seats is the minimum that covers 168 hours without anybody
+          working unsafe hours. If the event grows past thirty competitors,
+          Range Engineering and Arbitration are the first two to add to.
+        </p>
+        <p style="margin-top:0.8rem">
+          Crew roles are compensated &mdash; travel plus an honorarium. This is
+          not a volunteer event pretending otherwise.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ROSTER ===================== -->
+<section class="section" id="roster">
+  <div class="wrap">
+    <p class="eyebrow"><b>02</b> Roster</p>
+    <h2>Who is on duty</h2>
+    <p class="lede">
+      Crew works three shifts that overlap the Blue watches by twenty minutes
+      on each side, so every handover has a producer and an arbiter awake for
+      it. Nobody covers two consecutive shifts.
+    </p>
+
+    <div class="grid2">
+      <div class="tblock">
+        <h3>Crew shifts</h3>
+        <table class="dtable dtable--wide">
+          <thead><tr><th>Shift</th><th>Hours</th><th>Seats</th></tr></thead>
+          <tbody>
+            <tr><td><b>A</b><small>Overlaps the Dawn handover</small></td><td>05:40&ndash;14:00</td><td>3</td></tr>
+            <tr><td><b>B</b><small>Overlaps the Day handover</small></td><td>13:40&ndash;22:00</td><td>4</td></tr>
+            <tr><td><b>C</b><small>Overlaps the Night handover</small></td><td>21:40&ndash;06:00</td><td>3</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tblock">
+        <h3>Minimum on duty, always</h3>
+        <table class="dtable">
+          <thead><tr><th>Function</th><th>Cover</th></tr></thead>
+          <tbody>
+            <tr class="pos"><td>Arbiter<small>Rulings within 15 minutes</small></td><td>1 on duty</td></tr>
+            <tr class="pos"><td>Producer<small>Holds the broadcast kill switch</small></td><td>1 on duty</td></tr>
+            <tr><td>Range engineer<small>Fault response</small></td><td>1 on call</td></tr>
+            <tr><td>Welfare lead<small>On floor 08:00&ndash;24:00</small></td><td>1 on call</td></tr>
+            <tr><td>First aid<small>Named responder, contracted</small></td><td>1 on site</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:2rem">
+      <strong>Crew rest is not optional either.</strong> The same 8-in-24 rule that
+      binds competitors binds the White Team, and the welfare lead enforces it
+      upward as well as downward. An arbiter making disqualification calls on
+      four hours&rsquo; sleep is a liability, not a hero.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== RUNBOOK ===================== -->
+<section class="section" id="runbook">
+  <div class="wrap">
+    <p class="eyebrow"><b>03</b> Runbook</p>
+    <h2>The shape of a day</h2>
+    <p class="lede">
+      Days 2 through 6 run identically. Day 1 adds arrival and handoff, Day 7
+      replaces the noon escalation with hourly rotation and closes at 13:00.
+    </p>
+
+    <div class="daybook">
+      <div><time>00:00</time><p><b>Dawn watch handover</b> &mdash; producer cuts to it live. Arbiter observes and logs anything contested.</p></div>
+      <div><time>02:00</time><p>Range snapshot and scoring database backup. Verify the flow-record pipeline is still emitting on the one-hour delay.</p></div>
+      <div><time>08:00</time><p><b>Day watch handover</b>, on air. Welfare lead comes onto the floor.</p></div>
+      <div><time>11:00</time><p>Range health check across all fifteen services. Stage tomorrow&rsquo;s flag rotation. Confirm probe fleet calibration.</p></div>
+      <div><time>11:45</time><p>Escalation brief to the Blue Faction &mdash; what unlocks at noon, and what it does not include.</p></div>
+      <div><time>12:00</time><p><b>Capability layer goes live.</b> Infra confirms the new rules are actually loaded before anyone announces it.</p></div>
+      <div><time>12:15</time><p>Verify Service Floor probes still read true against the new layer. A misreading probe costs Blue 500 points unfairly.</p></div>
+      <div><time>16:00</time><p><b>Night watch handover</b>, on air.</p></div>
+      <div><time>Rolling</time><p>Adjudicate Disclosure Orders as issued. Reconcile scores continuously. Answer scope questions on demand.</p></div>
+      <div><time>23:00</time><p>Publish the day&rsquo;s scores and the rulings log. Opens the 24-hour dispute window.</p></div>
+    </div>
+
+    <div class="headline-rule headline-rule--amber">
+      <h3>Range fault versus Blue action</h3>
+      <p>
+        The distinction that generates the most disputes. If a target becomes
+        unreachable because the Range broke rather than because Blue blocked
+        something, the affected Red teams have their <strong>bridge-hours credited
+        back</strong> for the outage window and Blue&rsquo;s Service Floor is not
+        penalised.
+      </p>
+      <p>
+        Range Engineering declares faults; Arbitration applies the credit. Both
+        entries go in the rulings log the same day. Never resolve one of these
+        quietly &mdash; the appearance of a silent correction is worse than the
+        fault.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ARBITRATION ===================== -->
+<section class="section" id="arbitration">
+  <div class="wrap">
+    <p class="eyebrow"><b>04</b> Arbitration</p>
+    <h2>How calls get made</h2>
+    <p class="lede">
+      Competitors are building things nobody has seen before, at speed, for a
+      week. They will find edges in the rules. The job is not to have
+      anticipated every edge &mdash; it is to rule quickly, consistently, and in
+      public.
+    </p>
+
+    <div class="cards cards--2">
+      <article class="card card--amber">
+        <h4>Standing procedure</h4>
+        <ul class="spec">
+          <li>Any competitor may call for a ruling at any hour</li>
+          <li>Arbiter on duty responds within <b>15 minutes</b></li>
+          <li><b>Scope questions asked in advance are always free</b> &mdash; never penalise someone for checking first</li>
+          <li>Disqualification requires <b>two arbiters to concur</b></li>
+          <li>Every ruling is logged and published the same day</li>
+          <li>Scoring disputes: 24 hours from publication</li>
+        </ul>
+      </article>
+      <article class="card card--amber">
+        <h4>Precedent</h4>
+        <ul class="spec">
+          <li>A ruling binds the rest of the event, for every team</li>
+          <li>If a ruling turns out wrong, correct it publicly and credit affected teams</li>
+          <li>Never make a novel ruling that changes standings without both arbiters</li>
+          <li>Where the rules are silent, rule for the more interesting game</li>
+          <li>Where safety is involved, rule for safety and explain afterwards</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="headline-rule headline-rule--amber">
+      <h3>Disclosure Orders</h3>
+      <p>
+        Blue issues up to three a day. Arbitration serves the order, starts the
+        ten-minute clock, and verifies the disclosure against what the gateway
+        and the VPS pool actually show. A team may refuse once per event at a
+        cost of 300 points, and the refusal is announced on the broadcast.
+      </p>
+      <p>
+        <strong>False disclosure is disqualification</strong> &mdash; and it is the one
+        DQ that will be contested, so verify against two independent sources
+        before either arbiter says the word out loud.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INCIDENTS ===================== -->
+<section class="section" id="incidents">
+  <div class="wrap">
+    <p class="eyebrow"><b>05</b> Incidents</p>
+    <h2>When something goes wrong</h2>
+    <p class="lede">
+      Four categories, four different first calls. Everyone on crew should be
+      able to recite these without looking them up, because the ones that
+      matter happen at 03:00.
+    </p>
+
+    <div class="cards cards--4">
+      <article class="card card--good">
+        <h4>Medical</h4>
+        <p>
+          Named first-aid responder first, always. Welfare lead informed
+          immediately. Emergency services without hesitation if there is any
+          doubt &mdash; the broadcast is not a consideration.
+        </p>
+        <ul class="spec">
+          <li>Producer cuts the stream, no approval needed</li>
+          <li>Game clock does not stop; scoring is adjusted after</li>
+        </ul>
+      </article>
+      <article class="card card--good">
+        <h4>Code of conduct</h4>
+        <p>
+          Two named contacts, published with applications. One is the welfare
+          lead; one sits outside the White Team entirely, so no report has to
+          run through the people running the event.
+        </p>
+        <ul class="spec">
+          <li>Reports never go through the reporter&rsquo;s own faction</li>
+          <li>Welfare lead may stand anybody down immediately</li>
+        </ul>
+      </article>
+      <article class="card card--amber">
+        <h4>Technical</h4>
+        <p>
+          Range Engineering declares whether it is a fault or a legitimate
+          block. Infra owns anything below the gateway. Credit affected teams
+          and log it the same day.
+        </p>
+        <ul class="spec">
+          <li>Spare switch, spare gateway, spare laptops on site</li>
+          <li>Scoring database snapshotted every two hours</li>
+        </ul>
+      </article>
+      <article class="card card--amber">
+        <h4>Broadcast</h4>
+        <p>
+          Credentials, personal accounts, faces that should not be on camera.
+          The 60-second delay exists exactly for this and the producer uses it
+          without asking anyone.
+        </p>
+        <ul class="spec">
+          <li>Cut first, discuss after &mdash; never the other way round</li>
+          <li>Log every cut so the VOD edit knows where to look</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="note" style="margin-top:2rem">
+      <strong>Scope violations</strong> are a fifth case and they are handled quietly
+      and fast: Infra confirms from the gateway logs, both arbiters review,
+      and the team is told before anything is said on air. A competitor
+      accused of pointing tooling outside the Range in front of a live audience
+      &mdash; wrongly &mdash; is a serious harm we do not get to take back.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== BUILD ===================== -->
+<section class="section" id="build">
+  <div class="wrap">
+    <p class="eyebrow"><b>06</b> The build</p>
+    <h2>Nine months out</h2>
+    <p class="lede">
+      Sponsor cycles run three to six months and venue contracts need three
+      plus, so the runway is not negotiable. Four decisions gate everything
+      below them and none are made yet.
+    </p>
+
+    <div class="tblock" style="border:1px solid var(--line-soft); margin-top:3rem">
+      <table class="dtable dtable--wide">
+        <thead><tr><th>When</th><th>What</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr><td><b>T&minus;9 mo</b></td><td>Lock city, dates and venue. Nothing else can be costed until these exist.</td><td>All</td></tr>
+          <tr><td><b>T&minus;8</b></td><td>Run the pilot. Cut the sponsor reel from its footage.</td><td>All</td></tr>
+          <tr><td><b>T&minus;7</b></td><td>Rules of engagement, code of conduct, consent and media release, insurance broker.</td><td>Arbitration</td></tr>
+          <tr><td><b>T&minus;6</b></td><td>Sponsor outreach opens. Venue and hotel contracts signed.</td><td>Production</td></tr>
+          <tr><td><b>T&minus;5</b></td><td>Range engineering begins. Golden image built and cloned.</td><td>Range, Infra</td></tr>
+          <tr><td><b>T&minus;4</b></td><td>Applications open.</td><td>All</td></tr>
+          <tr><td><b>T&minus;3</b></td><td>Title and Infrastructure tiers closed. Catering and security contracted.</td><td>Production</td></tr>
+          <tr><td><b>T&minus;2</b></td><td>Competitor selection. Network map final, gateway rules written and tested.</td><td>Infra</td></tr>
+          <tr><td><b>T&minus;1</b></td><td>Full technical rehearsal including capture chain and Service Floor probes.</td><td>All</td></tr>
+          <tr class="neg"><td><b>T&minus;2 wk</b></td><td>Freeze the Range. Brief the broadcast crew.</td><td>Range</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="headline-rule headline-rule--amber">
+      <h3>Four open decisions</h3>
+      <p>
+        <strong>City and dates</strong> &mdash; every cost is a placeholder until fixed.
+        <strong>Venue</strong> &mdash; 24-hour access is the hard requirement and it
+        eliminates most rooms. <strong>Pilot or flagship first</strong> &mdash; the
+        highest-leverage call available, and the recommendation is the pilot.
+        <strong>The name</strong> &mdash; cheap to change now, expensive later.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== JOIN ===================== -->
+<section class="section" id="join">
+  <div class="wrap">
+    <p class="eyebrow"><b>07</b> Join</p>
+    <h2>Crew applications</h2>
+
+    <div class="split">
+      <div>
+        <h3>What we need</h3>
+        <p>
+          People who have run something operational at three in the morning and
+          can say clearly what happened afterwards. Range and Infra seats want
+          hands-on build experience; Arbitration wants judgement and the
+          temperament to be unpopular for good reasons.
+        </p>
+        <a class="btn btn--primary" href="mailto:crew@censorfest.example?subject=Crew%20application">Apply to crew</a>
+      </div>
+      <div>
+        <h3>What it involves</h3>
+        <p>
+          Part-time commitment through the build, full-time for the event week
+          plus setup and teardown. Compensated &mdash; travel, accommodation and
+          an honorarium. You do not compete, and you do not get to place bets
+          on the outcome either.
+        </p>
+        <ul class="spec">
+          <li>Build phase from <span class="tbc">TBC</span></li>
+          <li>On site 9 days including build and teardown</li>
+          <li>Same 8-in-24 rest rule as competitors</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="elsewhere">
+      <a href="index.html">
+        <span>Also here</span>
+        <strong>Compete &mdash; the competitor site</strong>
+        <em>The work, the Range, flag classes, scoring and the rules of engagement.</em>
+      </a>
+      <a href="sponsors.html">
+        <span>Also here</span>
+        <strong>Back it &mdash; the partner site</strong>
+        <em>Tiers, what sponsorship funds, and the staged approach.</em>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__row">
+    <div>
+      <p class="foot__mark" style="margin:0">Censor<span>fest</span></p>
+      <p style="margin:0.4rem 0 0">White Team operations reference</p>
+    </div>
+    <div>
+      <p style="margin:0">
+        <a href="mailto:crew@censorfest.example">crew@censorfest.example</a><br>
+        <a href="index.html">Compete</a> &nbsp;&middot;&nbsp; <a href="sponsors.html">Partner</a>
+      </p>
+    </div>
+    <div>
+      <p style="margin:0">
+        Dates, venue and city <span class="tbc">TBC</span><br>
+        Full operations plan in the repository
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

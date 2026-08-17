@@ -5,16 +5,25 @@ adversarial CTF and live broadcast network crucible.
 
 ## Contents
 
-| Path | What it is |
-|---|---|
-| `index.html` | The site. Single page, no build step, no dependencies. |
-| `assets/styles.css` | All styling. Design tokens at the top of the file. |
-| `assets/site.js` | Hero canvas ambience only. The site works fine without it. |
-| `PLAN.md` | **Operations plan v4.0** — the redesigned event. |
-| `REVIEW.md` | Review of the original v3.0 plan. The record of *why* v4.0 differs. |
+Three pages, one for each audience. They share a stylesheet and a script.
+
+| Path | Audience | What it covers |
+|---|---|---|
+| `index.html` | **Competitors** | The work, a sample day per faction, the Range, flag classes, the week, scoring, kit, rules of engagement, apply |
+| `crew.html` | **White Team** | Ten roles, duty roster, daily runbook, arbitration procedure, incident handling, the pre-event build |
+| `sponsors.html` | **Sponsors** | What the event is, who's in the room, tiers, where the money goes, the staged approach |
+| `assets/styles.css` | — | All styling. Design tokens at the top of the file. |
+| `assets/site.js` | — | Hero canvas ambience only. The site works fine without it. |
+| `PLAN.md` | — | **Operations plan v4.0** — the redesigned event. |
+| `REVIEW.md` | — | Review of the original v3.0 plan. The record of *why* v4.0 differs. |
 
 Read `PLAN.md` for what the event now is; `REVIEW.md` for the findings that
 produced it.
+
+Each page carries one of the three faction colours as its `--accent`, set by a
+body class (`p-compete` / `p-crew` / `p-sponsor`), so the three sites read as
+one system rather than three unrelated designs. The audience switcher in the
+nav stays visible at every width — it is how you reach the other two.
 
 ## Running it
 
@@ -81,16 +90,20 @@ Disabled under `prefers-reduced-motion`; pauses on hidden tabs.
 ## Before this goes live
 
 **Placeholders.** Everything the plan hasn't decided is marked with a dashed
-amber `TBC` chip rather than invented. Search the HTML for `class="tbc"`:
+amber `TBC` chip rather than invented. Search all three pages for `class="tbc"`:
 
 - Dates, venue and city
-- Broadcast platform
-- Application open date
+- Broadcast platform and audience figures
+- Application open date, crew build-phase start
 - Sponsor branding deadline
 
-Contact addresses are `apply@censorfest.example` and
-`partners@censorfest.example` — `.example` is a reserved domain, so these are
-inert until replaced.
+Contact addresses are `apply@`, `crew@` and `partners@censorfest.example` —
+`.example` is a reserved domain, so these are inert until replaced.
+
+**The sponsor page deliberately quotes no viewership number.** It says so, in
+as many words, and points at the pilot as the thing that will produce one. Do
+not fill that gap with a projection before the pilot has run — the page's
+credibility with a sponsor rests on that paragraph.
 
 **Two open decisions from `PLAN.md` §12** affect the site copy directly:
 
